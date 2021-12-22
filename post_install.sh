@@ -4,6 +4,7 @@ IP_ADDRESS=$(ifconfig | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk '{ prin
 fetch https://github.com/rob4226/code-server-freebsd-port/releases/download/v3.10.2/code-server-3.10.2_amd64.txz
 
 pkg install -y code-server-3.10.2_amd64.txz
+rm code-server-3.10.2_amd64.txz
 
 sysrc code_server_enable=YES
 
