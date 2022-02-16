@@ -12,7 +12,7 @@ mkdir -p /usr/home/${USER}/.config
 ln -s /usr/home /home
 
 pw user add ${USER} -c ${USER} -s /bin/sh
-echo $USER_PASS | pw usermod -n btfs -h 0
+echo $USER_PASS | pw usermod -n ${USER} -h 0
 chown -R ${USER}:${USER} /home/${USER}
 
 CONFIG=/home/${USER}/.config
